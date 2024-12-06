@@ -1,0 +1,16 @@
+@use 'reset';
+@use 'variables/global' as global;
+@use './themes/normal' as normalTheme;
+@use './themes/dark' as darkTheme;
+
+.app {
+    min-height: 100vh;
+    background: var(--bg-color);
+    font: var(--font-m);
+    color: var(--primary-color);
+}
+
+// .wrapper {
+//     flex-grow: 1;
+//     padding: 20px;
+// }

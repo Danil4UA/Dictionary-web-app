@@ -1,9 +1,9 @@
-import "./Navbar.css"
+import "./Navbar.scss"
 
 const Navbar = () => {
     return (
         <nav>
-            Navbar
+            navbar
         </nav>
     )
 };
