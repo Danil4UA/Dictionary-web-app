@@ -4,7 +4,7 @@ import Search from "../widgets/Search/Search"
 import { useTheme } from "./providers/ThemeProvider"
 
 function App() {
-  const {theme} = useTheme()
+  const {theme,} = useTheme()
   return (
     <div className={classNames("app", {}, [theme])}>
       <Navbar />
