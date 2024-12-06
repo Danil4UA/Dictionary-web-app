@@ -1,4 +1,3 @@
-import { Theme } from "../../../app/providers/ThemeProvider";
 import { classNames } from "../../lib/classNames/classNames"
 import { FC, ButtonHTMLAttributes } from "react"
 
@@ -18,14 +17,17 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button: FC<ButtonProps> = (props) => {
     const {
         children,
-        theme = Theme.LIGHT,
+        className = "",
+        theme = ThemeButton.CLEAR, // Default value matches ThemeButton type
         onClick,
-    } = props
+        ...otherProps // Spread to pass down any additional button props
+    } = props;
 
     return (
         <button 
-            className={classNames("Button", {}, [theme])}
+            className={classNames("Button", {}, [className, theme])} // Include className if provided
             onClick={onClick}
+            {...otherProps}
         >
             {children}
         </button>
