@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
 import "./ContentTitle.scss";
+import Button from "../../../shared/ui/Button/Button";
+import { classNames } from "../../../shared/lib/classNames/classNames";
+import PlayIcon from "../../../assets/icons/play-button.svg";
+
 
 interface Phonetic {
     audio: string;
@@ -33,12 +37,18 @@ const ContentTitle = ({ word, phonetic, phonetics }: ContentTitleProps) => {
 
     return (
         <div className="ContentTitle">
-            <div className="ContentTitle_Word">{word}</div>
-            <div className="ContentTitle_Phonetic">{phonetic}</div>
+            <div>   
+                <div className="ContentTitle_Word">{word}</div>
+                <div className="ContentTitle_Phonetic">{phonetic}</div>
+            </div>
             {audio ? (
-                <button onClick={playAudio} aria-label="Play pronunciation">
-                    Play
-                </button>
+                <Button 
+                    className={classNames("ContentTitle_Audio", {}, [])}
+                    onClick={playAudio} aria-label="Play pronunciation"
+                >
+                  <img src={PlayIcon} alt="play icon" width="72px"/>
+                </Button>
+               
             ) : (
                 <p>No audio available</p>
             )}

@@ -24,7 +24,7 @@ interface ContentMainProps {
 const ContentMain = (props: ContentMainProps) => {
     const { word, meanings, sourceUrls, } = props.dataObj;
     return (
-        <div>
+        <div className="ContentMain">
 
             {word &&
                     meanings.map((meaning, index) => (
@@ -35,18 +35,22 @@ const ContentMain = (props: ContentMainProps) => {
                         </div>
 
                         <div>
-                            <p>Meaning</p>
+                            <p className="meaning">Meaning</p>
                             {meaning.definitions.map((definition, idx) => (
                                 <div key={idx}> 
                                     <li>{definition.definition}</li>
-                                    {definition.example && <p>{definition.example}</p>}
+                                    {definition.example && <li style={{color: "grey"}}>"{definition.example}"</li>}
                                 </div>
                             ))}
                             {meaning.synonums && <p>{meaning.synonums}</p>}
                         </div>
                     </ul>
                 ))} 
-                source: {sourceUrls[0]}
+                <div className="border-line"></div>
+                <div style={{paddingTop:"20px"}}>
+                    <span style={{color: "grey", paddingRight: "20px"}}>Source</span><a target="_blank" href={sourceUrls[0]}>{sourceUrls[0]}</a>
+                </div>
+                
         </div>
     );
 };

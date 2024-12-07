@@ -1,5 +1,13 @@
 .ContentTitle {
     padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ContentTitle_Audio img {
+  border-radius: 50%;
+  background: var(--secondary-color);
 }
 
 .ContentTitle_Word {
