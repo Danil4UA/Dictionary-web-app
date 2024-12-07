@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./ContentTitle.scss";
 import Button from "../../../shared/ui/Button/Button";
 import { classNames } from "../../../shared/lib/classNames/classNames";
-import PlayIcon from "../../../assets/icons/play-button.svg";
+import PlayIcon from "../../../assets/icons/icon-play.svg";
 
 
 interface Phonetic {
