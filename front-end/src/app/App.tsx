@@ -9,9 +9,11 @@ function App() {
 
   return (
     <div className={classNames("app", {}, [theme])}>
-      <Navbar />
-      <Search />
-      <Content />
+      <div className="wrapper">
+        <Navbar />
+        <Search />
+        <Content />
+      </div>
     </div>
   )
 }

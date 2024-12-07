@@ -8,6 +8,8 @@ export interface DataObject {
     word: string;
     phonetic: string;
     meanings: [];
+    phonetics: [];
+    sourceUrls: string[]
 }
 
 const Content = () => {
@@ -26,8 +28,8 @@ const Content = () => {
         <div className="content">
             {dataObj && 
                 <div>
-                    <ContentTitle word={dataObj.word} phonetic={dataObj.phonetic} />
-                    <ContentMain dataObj={dataObj}/>
+                    <ContentTitle word={dataObj.word} phonetic={dataObj.phonetic} phonetics={dataObj.phonetics} />
+                    <ContentMain dataObj={dataObj} />
                 </div>
                
             }

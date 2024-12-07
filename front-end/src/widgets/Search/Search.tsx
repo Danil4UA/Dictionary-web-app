@@ -29,7 +29,6 @@ const Search = () => {
                 ref={inputRef}
                 placeholder="Search"
             />
-            {/* <button type="submit">Search</button>  */}
         </form>
     );
 };
