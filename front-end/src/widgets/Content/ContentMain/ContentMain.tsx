@@ -47,8 +47,11 @@ const ContentMain = (props: ContentMainProps) => {
                     </ul>
                 ))} 
                 <div className="border-line"></div>
-                <div style={{paddingTop:"20px"}}>
-                    <span style={{color: "grey", paddingRight: "20px"}}>Source</span><a target="_blank" href={sourceUrls[0]}>{sourceUrls[0]}</a>
+                <div className="source-link-container" style={{ paddingTop: "20px" }}>
+                    <span style={{ color: "grey", paddingRight: "20px" }}>Source</span>
+                    <a className="source-link" target="_blank" href={sourceUrls[0]}>
+                        {sourceUrls[0]}
+                    </a>
                 </div>
                 
         </div>

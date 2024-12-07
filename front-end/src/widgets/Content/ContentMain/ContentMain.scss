@@ -22,3 +22,18 @@
     color: grey;
     padding-bottom: 20px;
 }
+
+.source-link-container {
+    display: flex;
+    align-items: center; 
+    flex-wrap: wrap;
+}
+
+.source-link {
+    color: var(--secondary-color); 
+    text-decoration: underline;
+    word-wrap: break-word; 
+    overflow-wrap: anywhere; 
+    max-width: 100%; 
+    white-space: normal; 
+}
